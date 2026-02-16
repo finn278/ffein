@@ -25,6 +25,7 @@ socket.on("startGame", () => {
     waitingDiv.style.display = "none";
     gameContainerDiv.style.display = "block";
 
+    cells.forEach(cell => cell.innerHTML = "");
     cells.forEach(cell => cell.addEventListener("click", cellClicked));
     statusMessage.innerHTML = "X's turn";
 });

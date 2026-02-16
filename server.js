@@ -23,18 +23,18 @@ io.on("connection", (socket) => {
             socket.join(room);
             socket.emit("waiting");
             console.log(`${socket.id} has joined room ${room}`);
-
-            games[room] = {
-                board: ["", "", "", "", "", "", "", "", ""],
-                currentPlayer: "X",
-                running: false
-            };
         }
         else{
             socket.player = "O";
             socket.room = room;
             socket.join(room);
             io.to(room).emit("startGame");
+
+            games[room] = {
+                board: ["", "", "", "", "", "", "", "", ""],
+                currentPlayer: "X",
+                running: false
+            };
             games[room]["running"] = true;
             
             console.log(`${socket.id} has joined room ${room}`);
