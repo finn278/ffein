@@ -1,0 +1,38 @@
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 40px;
+}
+
+#login {
+    text-align: center;
+}
+
+#waiting {
+    text-align: center;
+    display: none;
+}
+
+#gameContainer {
+    text-align: center;
+    display: none;
+}
+
+#cellGrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 450px;
+    margin: auto;
+}
+
+.cell {
+    width: 150px;
+    height: 150px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 150px;
+    font-size: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
